@@ -7,17 +7,7 @@ This project investigates and compares three different types of deep learning mo
 - 🔹 **Model 1**: Non-Linear Model with ReLU Activation (`FashionMNISTModelV1`)
 - 🔹 **Model 2**: Convolutional Neural Network (CNN - `FashionMNISTModelV2`, a TinyVGG)
 
----
 
-## 📊 Performance Summary
-
-| Model | Architecture Type | Accuracy (%) | Loss | Training Time (s) |
-|-------|-------------------|--------------|------|-------------------|
-| **V0** | Linear            | 82.96        | 0.492 | 131.91            |
-| **V1** | Non-Linear (ReLU) | 83.31        | 0.464 | 4208.89           |
-| **V2** | CNN (TinyVGG)     | **85.97**    | **0.359** | **7663.90**      |
-
----
 
 ## 🧩 Key Concepts in Play
 
@@ -131,11 +121,38 @@ class FashionMNISTModelV2(nn.Module):
   - Highest training time (7663s) due to complex forward/backward computations.
   - Best-suited for any vision-related tasks — accuracy gain justifies training cost for most real-world applications.
 
-### 📈 Training Curves (Optional)
+---
 
-You can visualize accuracy/loss per epoch using tools like **Matplotlib** or **TensorBoard** to track convergence.
+## 📊 Performance Summary
+
+| Model | Architecture Type | Accuracy (%) | Loss | Training Time (s) |
+|-------|-------------------|--------------|------|-------------------|
+| **V0** | Linear            | 82.96        | 0.492 | 131.91            |
+| **V1** | Non-Linear (ReLU) | 83.31        | 0.464 | 4208.89           |
+| **V2** | CNN (TinyVGG)     | **85.97**    | **0.359** | **7663.90**      |
 
 ---
+
+<p align="center">
+  <img src="https://github.com/Ahnuf-Karim-Chowdhury/FashionMNIST-Linear-vs-Non-Linear-vs-CNN-Model/blob/main/Images/02-Linear_VS_Non-Linear_Vs_CNN.png?raw=true" style="max-width: 100%; height: auto;">
+</p>
+
+--- 
+
+### 📈 Training Curves 
+
+<p align="center">
+  <img src="https://github.com/Ahnuf-Karim-Chowdhury/FashionMNIST-Linear-vs-Non-Linear-vs-CNN-Model/blob/main/Images/03-Linear_VS_Non-Linear_Vs_CNN.png?raw=true" style="max-width: 100%; height: auto;">
+</p>
+
+
+---
+
+### 🤖 CNN Model (The Model With the most Accuracy) Predictions :
+<p align="center">
+  <img src="https://github.com/Ahnuf-Karim-Chowdhury/FashionMNIST-Linear-vs-Non-Linear-vs-CNN-Model/blob/main/Images/model_2_prediction.png?raw=true" style="max-width: 100%; height: auto;">
+</p>
+
 
 ### 💡 Why Use CNNs for Images?
 
@@ -174,9 +191,6 @@ pip install torch torchvision tqdm matplotlib
 
 
 ---
-
-#### 4. **Conclusion and References:**
-Currently listed like plain text. Use bullet points or headings:
 
 
 ### 📌 Conclusion
