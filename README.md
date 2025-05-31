@@ -147,11 +147,81 @@ class FashionMNISTModelV2(nn.Module):
 
 
 ---
+## 🧪 CNN Evaluation on FashionMNIST (The Model With the most Accuracy)
 
-### 🤖 CNN Model (The Model With the most Accuracy) Predictions :
+The image below showcases **sample predictions** made by a Convolutional Neural Network (CNN) trained on the FashionMNIST dataset:
+
 <p align="center">
   <img src="https://github.com/Ahnuf-Karim-Chowdhury/FashionMNIST-Linear-vs-Non-Linear-vs-CNN-Model/blob/main/Images/model_2_prediction.png?raw=true" style="max-width: 100%; height: auto;">
 </p>
+
+---
+
+### 🖼️ Grid Layout
+- The 3×3 grid displays **9 test images**.
+- Each image is accompanied by:
+  - `Pred:` → Model's predicted class
+  - `Truth:` → Actual ground-truth label
+
+---
+
+### 🎯 Prediction Color Coding
+
+- ✅ **Correct Predictions**: Label is shown in **green**.
+- ❌ **Incorrect Predictions**: Label is shown in **red** for visibility.
+
+---
+
+### ✅ Correct Predictions
+
+The CNN correctly classified 8 out of 9 examples:
+
+- **Sandal**
+- **Trouser**
+- **Sneaker**
+- **Coat**
+- **Dress**
+- **Coat** (repeated)
+- **Sneaker**
+- **Trouser**
+
+These results show the CNN's ability to generalize well on various clothing types with distinct shapes and textures.
+
+---
+
+### ❌ Incorrect Prediction
+
+- 🔴 `Pred: Shirt | Truth: T-shirt/top`
+  - **Analysis**: This is a reasonable confusion, as **shirts and T-shirts** share similar structural features in grayscale low-resolution images.
+  - The CNN may struggle to capture subtle differences without color or fine-grained patterns.
+
+---
+
+### 📌 Insights
+
+- **CNN Strengths**:
+  - High accuracy on visually distinct items (e.g., Sneaker vs. Trouser).
+  - Robust pattern recognition despite grayscale and low resolution.
+
+- **Limitations**:
+  - Ambiguities between similar-looking classes (Shirt vs T-shirt/top).
+  - Possible improvements using:
+    - Data augmentation
+    - Deeper architectures
+    - Attention mechanisms
+
+---
+
+### 📉 Performance Summary
+
+| Metric              | Value       |
+|---------------------|-------------|
+| Correct Predictions | 8 / 9       |
+| Accuracy (sample)   | ~88.89%     |
+| Error Cases         | Shirt ↔ T-shirt/top |
+
+---
+
 
 
 ### 💡 Why Use CNNs for Images?
